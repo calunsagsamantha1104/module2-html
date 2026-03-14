@@ -1,16 +1,24 @@
 /* Background Color */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
 }
 
-/* Center layout */
-main, header, footer {
-    max-width: 800px;
-    margin: auto;
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
 }
+
+.hidden {
+  display: none;
+}
+
+.profile-photo {
+  width: 150px;
+  border-radius: 50%;
+}
+
 
 /* Section Cards */
 .card {
@@ -88,10 +96,10 @@ button:hover {
 }
 
 .dark-mode {
-background-color:#222;
-color:white;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
 .hidden {
-display:none;
+  display: none;
 }
