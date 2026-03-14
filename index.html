@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Online CV</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<meta charset="UTF-8">Submit</button>
-
-<title>Personal Online CV</title>
+  <meta charset="UTF-8">
+  <title>Personal Online CV</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <button id="themeToggle">Light/Dark Mode</button> 
 </head>
 <body>
-</body>
-</html>
-<header>
+
+  <header>
+    <h1>Samantha S. Calunsag</h1>
+    <p>IT Student | Web Systems and Technologies</p>
+  </header>
+
+  <main>
+    <!-- About Me -->
     <section>
-<h1>Samantha Nicole E. Bogo</h1>
-<p> IT Student | Web Systems and Technologies </p>
-</header>
-<main>
+      <h2>About Me</h2>
+      <img src="images/photo.jpg" alt="Profile photo">
+      <p>Hi! I'm Love Samantha Nicole Bogo. I'm an IT student who enjoys learning new things and improving skills.</p>
+      <p>
+        Email:
+        <a href="mailto:bogosamanthanicole25@mail.com">bogosamanthanicole25@mail.com</a><br>
+        GitHub:
+        <a href="https://github.com" target="_blank">github.com</a>
+      </p>
+    </section>
+
+    <!-- Education -->
     <section>
-<h2>About Me</h2>
-<img src="images/photo.jpg" alt="Profile photo">
-<p> Hi! I'm Love Samantha Nicole Bogo. I'm an IT student who enjoys learning new things and improving skills.</p>
-<p>Email:
-<a href="bogosamanthanicole25@mail.com">bogosamanthanicole25@mail.com</a><br>
-GitHub:
-<a href="https://github.com" target="_blank">github.com</a>
-</p>
-</section>
-<section>
-<h2>Education</h2>
-<table border="1" cellpadding="5" cellspacing="0">
-    <thead>
-        <tr>
+      <h2>Education</h2>
+      <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+          <tr>
             <th>Program</th>
             <th>Institution</th>
             <th>Year Graduated</th>
-            </tr>
-    </thead>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>College</td>
+            <td>USTP – CDO Campus</td>
+            <td>2028</td>
+          </tr>
+          <tr>
+            <td>Senior High School</td>
+            <td>Liceo De Cagayan University</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td>Junior High School</td>
+            <td>MOGCHS</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>Elementary</td>
+            <td>City Central School</td>
+            <td>2016</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <tbody>
-        <tr>
-            <td>College</th>
-            <td>USTP – CDO Campus</th>
-            <td>2028</th>
-            <tr>
-                <td>Senior HighSchool</th>
-                <td>Immaculate Academy</th>
-                <td>2023</th>
-            </tr>
-            <tr>
-                <td>HighSchool</th>
-                <td>Immaculate Academy</th>
-                <td>2020</th>
-            </tr>
-            <tr>
-                <td>Elementary</th>
-                <td>DCES</th>
-                <td>2016</th>
-            </tr>
-    </tbody>
-</table>
-</section>
-<section>
-<h2>Contact Me</h2>
-<form>
-<input type="text" placeholder="Name"><br><br>
-<input type="email" placeholder="Email"><br><br>
-<textarea placeholder="Message"></textarea><br><br>
-<button type="submit">Send</button>
-</form>
-</section>
-<h2>Skills</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
+    <!-- Contact -->
+    <section>
+      <h2>Contact Me</h2>
+      <form>
+       <input type="text" id="name" placeholder="Name">
+       <input type="email" id="email" placeholder="Email">
+       <button type="submit" id="submitBtn">Send</button> 
+      </form>
+    </section>
 
-<ul>
-<li>Web Development</li>
-<ul>
-<li>Frontend</li>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
-</li>
+    <button id="toggleSkills">Show/Hide Skills</button> 
+    <section class="card" id="skillsSection"> 
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
 
-<li>Backend</li>
-</ul>
-</li>
-</ul>
-</section>
-</main>
-<footer>
-    <p>&copy; 2026 Samantha Nicole Bogo. All rights reserved. </p>
-</footer>
+      <h3>Web Development</h3>
+      <ul>
+        <li>Frontend
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </li>
+        <li>Backend</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Samantha S. Calunsag. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

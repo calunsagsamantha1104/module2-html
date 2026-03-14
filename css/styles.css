@@ -62,7 +62,7 @@ th {
     color: white;
 }
 
-/* Styled Form */
+
 form {
     display: flex;
     flex-direction: column;
@@ -87,4 +87,11 @@ button:hover {
     background-color: #005fa3;
 }
 
-/* Footer *
+.dark-mode {
+background-color:#222;
+color:white;
+}
+
+.hidden {
+display:none;
+}
