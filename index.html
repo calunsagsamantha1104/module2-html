@@ -2,90 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Personal Online CV</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Samantha S. Calunsag - CV</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Dark Mode Toggle -->
+  <button id="toggle-mode">Light/Dark Mode</button>
 
-  <button id="toggle-dark">Light/Dark Mode</button>
-
+  <!-- Header -->
   <header>
     <h1>Samantha S. Calunsag</h1>
-    <p>IT Student | Web Systems and Technologies</p>
+    <h2>IT Student | Web Systems and Technologies</h2>
   </header>
 
-  <main>
-    <!-- About Me -->
-    <section>
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="Profile photo" class="profile-photo">
-      <p>I am an IT student with a growing interest in technology and problem-solving, currently learning the fundamentals of information technology, including programming, systems, and software tools.</p>
+  <!-- About Me Section -->
+  <section id="about">
+    <img src="your-photo.jpg" alt="Profile Photo" class="profile-pic">
+    <p>Hi! I'm Samantha S. Calunsag. I'm an IT student who enjoys learning new things and improving skills.</p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
+  </section>
 
-      <p>
-        Email:
-        <a href="mailto:calunsag.samantha1104@mail.com">calunsag.samantha1104@mail.com</a><br>
-        GitHub:
-        <a href="https://github.com/calunsagsamantha1104" target="_blank">github.com/calunsagsamantha1104</a>
-      </p>
-    </section>
+  <!-- Education Section -->
+  <section id="education">
+    <h3>Education</h3>
+    <table>
+      <tr>
+        <th>Program</th>
+        <th>Institution</th>
+        <th>Year Graduated</th>
+      </tr>
+      <tr>
+        <td>College</td>
+        <td>USTP-CDO</td>
+        <td>2028</td>
+      </tr>
+      <tr>
+        <td>Senior High School</td>
+        <td>Immaculate Academy Duero Bohol, Inc.</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>Junior High School</td>
+        <td>Immaculate Academy Duero Bohol, Inc.</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>Elementary</td>
+        <td>Duero Central Elementary School</td>
+        <td>2016</td>
+      </tr>
+    </table>
+  </section>
 
-    <!-- Education -->
-    <section>
-      <h2>Education</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Program</th>
-            <th>Institution</th>
-            <th>Year Graduated</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>College</td><td>USTP – CDO Campus</td><td>2028</td></tr>
-          <tr><td>Senior High School</td><td>Liceo De Cagayan University</td><td>2023</td></tr>
-          <tr><td>Junior High School</td><td>MOGCHS</td><td>2020</td></tr>
-          <tr><td>Elementary</td><td>City Central School</td><td>2016</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Name"><br><br>
-        <input type="email" placeholder="Email"><br><br>
-        <textarea placeholder="Message"></textarea><br><br>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-
- <section>
-  <button id="toggleSkills">Show/Hide Skills</button>
-  <div id="skillsSection" class="hidden">
-  <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-    <h3>Web Development</h3>
-    <ul>
-      <li>Frontend
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-        </ul>
-  </div>
-</section>
-  </main>
-
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2026 Samantha S. Calunsag. All rights reserved.</p>
+    <p>© 2026 Samantha S. Calunsag. All rights reserved.</p>
   </footer>
-  <div id="root"></div>
-  <script src="js/script.js"></script>
+
+  <!-- Script for Dark Mode -->
+  <script>
+    const toggle = document.getElementById('toggle-mode');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
