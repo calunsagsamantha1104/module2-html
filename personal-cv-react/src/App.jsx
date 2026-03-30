@@ -17,8 +17,8 @@ function App() {
   const educationData = [
     { program: "College", school: "USTP-CDO", year: "2028" },
     { program: "Senior High School", school: "Liceo De Cagayan University", year: "2023" },
-    { program: "Junior High School", school: "MOGCHS  ", year: "2020" },
-    { program: "Elementary", school: "City Central ELementary School", year: "2016" },
+    { program: "Junior High School", school: "MOGCHS", year: "2020" },
+    { program: "Elementary", school: "City Central School", year: "2016" },
   ];
 
   const skillsData = ["HTML", "CSS", "JavaScript", "React"];
@@ -40,7 +40,7 @@ function App() {
           <Contact />
 
           <footer>
-        <p>Samantha S. Calunsag . All rights reserved © 2026</p>
+        <p>© 2026 Samantha S. Calunsag. All rights reserved.</p>
       </footer>
 
         </div>

@@ -2,70 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Samantha S. Calunsag - CV</title>
-  <link rel="stylesheet" href="style.css">
+  <title>personal-cv-react</title>
+  <link rel="icon" type="image/svg+xml" href="./personal-cv-react/public/favicon.svg" />
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <!-- Dark Mode Toggle -->
-  <button id="toggle-mode">Light/Dark Mode</button>
 
+<div id="root">
+<div class="wrapper">
   <!-- Header -->
-  <header>
+  <button id="modeToggle">Light/Dark Mode</button>
+  <header class="card">
     <h1>Samantha S. Calunsag</h1>
-    <h2>IT Student | Web Systems and Technologies</h2>
+    <p class="subtitle">IT Student | Web Systems and Technologies</p>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <img src="your-photo.jpg" alt="Profile Photo" class="profile-pic">
-    <p>Hi! I'm Samantha S. Calunsag. I'm an IT student who enjoys learning new things and improving skills.</p>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
-  </section>
+  <main>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h3>Education</h3>
-    <table>
-      <tr>
-        <th>Program</th>
-        <th>Institution</th>
-        <th>Year Graduated</th>
-      </tr>
-      <tr>
-        <td>College</td>
-        <td>USTP-CDO</td>
-        <td>2028</td>
-      </tr>
-      <tr>
-        <td>Senior High School</td>
-        <td>Immaculate Academy Duero Bohol, Inc.</td>
-        <td>2023</td>
-      </tr>
-      <tr>
-        <td>Junior High School</td>
-        <td>Immaculate Academy Duero Bohol, Inc.</td>
-        <td>2020</td>
-      </tr>
-      <tr>
-        <td>Elementary</td>
-        <td>Duero Central Elementary School</td>
-        <td>2016</td>
-      </tr>
-    </table>
-  </section>
+    <section class="card about-box">
+      <div class="aboutme">
+      <h2>About Me</h2>
+      <img src=./images/profile.jpg alt="Profile photo" width="150" />
 
-  <!-- Footer -->
+        <p>
+         Hi! I'm Samantha S. Calunsag. I'm an IT student who enjoys learning new things and improving skills.
+        </p>
+
+        <p>
+          Email:
+          <a href="mailto:calunsag.samantha1104@gmail.com">
+            calunsag.samantha1104@gmail.com
+          </a>
+          <br />
+          GitHub:
+          <a href="https://github.com" target="_blank" rel="noreferrer">
+            github.com
+          </a>
+        </p>
+      </div>
+    </section>
+
+  
+    <section class="card">
+      <h2>Education</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Institution</th>
+            <th>Year Graduated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>College</td>
+            <td>USTP-CDO</td>
+            <td>2028</td>
+          </tr>
+          <tr>
+            <td>Senior High School</td>
+            <td>Liceo De Cagayan University</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td>Junior High School</td>
+            <td>MOGCHS.</td>
+            <td>2020</td>
+          </tr>
+          <tr>
+            <td>Elementary</td>
+            <td>City Central School</td>
+            <td>2016</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section class="card">
+      <button id="toggleSkills">Hide Skills</button>
+            <div class="skills-content" id="skillsContent">
+      <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>Contact Me</h2>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <button>Send</button>
+    </section>
+
+  </main>
+
+
   <footer>
-    <p>© 2026 Samantha S. Calunsag. All rights reserved.</p>
+    © 2026 Samantha S. Calunsag. All rights reserved.
   </footer>
 
-  <!-- Script for Dark Mode -->
-  <script>
-    const toggle = document.getElementById('toggle-mode');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
+</div>
+</div>
+
+<script>
+  const modeBtn = document.getElementById("modeToggle");
+  const root = document.getElementById("root");
+
+  modeBtn.addEventListener("click", () => {
+    root.classList.toggle("dark-mode");
+  });
+
+  const toggleBtn = document.getElementById("toggleSkills");
+  const skills = document.getElementById("skillsContent");
+
+  toggleBtn.addEventListener("click", () => {
+    skills.classList.toggle("hidden");
+
+    toggleBtn.textContent =
+      skills.classList.contains("hidden")
+        ? "Show Skills"
+        : "Hide Skills";
+  });
+</script>
+
 </body>
 </html>
