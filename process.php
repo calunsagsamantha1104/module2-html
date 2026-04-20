@@ -1,31 +1,26 @@
 <?php
-header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type: application/json");
 
-$rawInput = file_get_contents("php://input");
-$data = json_decode($rawInput, true);
-
-if (json_last_error() !== JSON_ERROR_NONE) {
-    echo json_encode([
-        "status" => "error",
-        "message" => "Invalid JSON input"
-    ]);
-    exit;
-}
-
+$conn = new mysqli("localhost", "root", "", "cv_database");
+$data = json_decode(file_get_contents("php://input"), true);
 if (empty($data['name'])) {
-    echo json_encode([
-        "status" => "error",
-        "message" => "Name is required"
-    ]);
-    exit;
-}
-
-$name = htmlspecialchars($data['name'], ENT_QUOTES, 'UTF-8');
 echo json_encode([
-    "status" => "success",
-    "message" => "Hello " . $name
+"message" => "Name is required"
 ]);
+exit();
+}
+$name = $conn->real_escape_string($data['name']);
+$sql = "INSERT INTO contacts (name) VALUES ('$name')";
+if ($conn->query($sql) === TRUE) {
+echo json_encode([
+"message" => "Data saved successfully"
+]);
+} else {
+echo json_encode([
+"message" => "Error saving data"
+]);
+}
 ?>
