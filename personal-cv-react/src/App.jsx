@@ -29,7 +29,7 @@ function App() {
       <div className="wrapper">
 
         <button className="toggle-btn" onClick={toggleDarkMode}>
-          Light/Dark Mode
+         Light-Dark Mode
         </button>
 
         <div className="container">
